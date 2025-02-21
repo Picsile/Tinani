@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru" class="h-full">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/style.css" />
+        <title>Tinani</title>
+    </head>
+
+    <body class="flex flex-col h-full">
+
+        <header class="max-w-container-main flex items-center w-full pt-[2em] mx-auto">
+            <a href="index.html">
+                <img class="h-8" src="./assets/img/static/logo.svg" alt="Tinani" />
+            </a>
+
+            <div class="flex flex-1 justify-center">
+                <ul class="header__nav-links flex gap-16 font-ibm-regular tracking-[.06em] text-lg">
+                    
+                    <li class="cursor-pointer">
+                        <a href="index.html" class="px-2">Главная</a>
+                        <div class="w-full h-0.5 bg-slate-950 transition-all"></div>
+                    </li>
+                    
+                    <li class="cursor-pointer">
+                        <a href="pictures.html" class="px-2">Картины</a>
+                        <div class="w-0 h-0.5 bg-slate-950 transition-all"></div>
+                    </li>
+
+                    <li class="cursor-pointer">
+                        <a class="px-2">Мероприятия</a>
+                        <div class="w-0 h-0.5 bg-slate-950 transition-all"></div>
+                    </li>
+
+                    <li class="cursor-pointer">
+                        <a class="px-2">Обо мне</a>
+                        <div class="w-0 h-0.5 bg-slate-950 transition-all"></div>
+                    </li>
+                </ul>
+            </div>
+        </header>
+
+        <main class="flex flex-col justify-center flex-grow">
+
+            <section class="my-[5.4em]">
+
+                <div class="h-[33.75em] bg-slate-950">
+                    <div class="max-w-container-main flex justify-between items-center h-full mx-auto">
+
+                        <div class="max-w-[33.75em] w-[33.75em] text-white">
+                            <h1 class="font-montserrat text-6xl text-nowrap mb-4">Liparteliani Valentina</h1>
+                            <span class="font-montserrat text-2xl"
+                                >Model | Actress | Painter | Storyteller</span
+                            >
+                                <p class="flex flex-col gap-1 font-montserrat text-xl text-nowrap mt-8">
+                                    <span
+                                        >“ Искусство — это путешествие души, способное связать</span
+                                    >
+                                    <span class="pl-2.5"
+                                        >мечты с реальностью, оставляя след в сердцах тех,</span
+                                    >
+                                    <span class="pl-2.5"
+                                        >кто ищет красоту в каждом мгновении „</span
+                                    >
+                                </p>
+                        </div>
+
+                        <div class="relative flex-1 max-w-[38.75em] h-full overflow-hidden">
+                            <div class="absolute z-10 left-0 h-full -translate-x-1">
+                                <img class="h-full" src="./assets/img/static/frame-side.png" alt="frame" />
+                            </div>
+                            <div
+                                class="h-full bg-cover bg-center"
+                                style="background-image: url('./assets/img/static/main-hero.jpg')"
+                            ></div>
+                            <div
+                                class="absolute z-10 top-0 right-0 h-full rotate-180 translate-x-1"
+                            >
+                                <img class="h-full" src="./assets/img/static/frame-side.png" alt="frame" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="flex justify-center gap-10 font-ibm-regular tracking-[.06em] text-xl mt-12"
+                >
+                    <div class="hero__btn relative">
+                        <button onclick="window.location.href='./pictures.html'" class="w-60 h-12 border-2 border-slate-950 transition-all">Картины</button>
+                        <div class="absolute -z-10 bottom-0 w-full h-0 bg-slate-950 transition-all"></div>
+                    </div>
+
+                    <div class="hero__btn relative">
+                        <button class="w-60 h-12 border-2 border-slate-950 transition-all">Меропрития</button>
+                        <div class="absolute -z-10 bottom-0 w-full h-0 bg-slate-950 transition-all"></div>
+                    </div>
+
+                    <div class="hero__btn relative">
+                        <button class="w-60 h-12 border-2 border-slate-950 transition-all">Обо мне</button>
+                        <div class="absolute -z-10 bottom-0 w-full h-0 bg-slate-950 transition-all"></div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="bg-slate-950">
+            <ul
+                class="max-w-container-main flex justify-between font-ibm-regular tracking-[.06em] py-2.5 mx-auto invert"
+            >
+                <li class="flex gap-4 items-center">
+                    <img src="./assets/img/icon/mail.png" alt="mail" width="24" height="24" />
+                    <a href="mailto:tinani@gmail.com" target="_blank" rel="noopener noreferrer">tinani@gmail.com</a>
+                </li>
+                <li class="flex gap-4 items-center">
+                    <img src="./assets/img/icon/telegram.png" alt="telegram" width="24" height="24" />
+                    <a href="https://t.me/sufrazhistka" target="_blank" rel="noopener noreferrer">t.me/sufrazhistka</a>
+                </li>
+                <li class="flex gap-4 items-center">
+                    <img src="./assets/img/icon/instagram.png" alt="instagram" width="24" height="24" />
+                    <a href="https://instagram.com/your_tinani" target="_blank" rel="noopener noreferrer">instagram.com/your_tinani</a>
+                </li>
+                <li class="flex gap-4 items-center">
+                    <img src="./assets/img/icon/ruble.png" alt="boosty" width="24" height="24" />
+                    <a href="https://boosty.to/tinani/donate" target="_blank" rel="noopener noreferrer">boosty.to/tinani/donate</a>
+                </li>
+            </ul>
+        </footer>
+        
+    </body>
+</html>

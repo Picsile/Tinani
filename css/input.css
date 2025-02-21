@@ -1,0 +1,50 @@
+@tailwind base;
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+  font-family: "IBM-Regular";
+  src: url("../fonts/IBMPlexSerif-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-VariableFont_wght.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Tinos";
+  src: url("../fonts/Tinos-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Header nav */
+
+.header__nav-links li:hover div {
+  @apply w-full;
+}
+
+/* Hero btn */
+.hero__btn:hover button {
+  @apply text-white;
+}
+
+.hero__btn:hover div {
+  @apply h-full;
+}
+
+/* Modal picture */
+#modal-picture {
+  transition: 0.7s;
+}

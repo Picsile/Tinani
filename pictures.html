@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/style.css" />
+        <title>Tinani | Картины</title>
+        <link rel="shortcut icon" href="./assets/img/static/mini-logo.svg">
+    </head>
+
+    <body class="relative">
+
+        <header class="w-full bg-white">
+            <div class="max-w-container-pictures flex items-center pt-[2em] mx-auto">
+                <a href="index.html">
+                    <img class="w-24" src="./assets/img/static/logo.svg" alt="Tinani" />
+                </a>
+
+                <div class="flex flex-1 justify-center">
+                    <ul
+                        class="header__nav-links flex gap-16 font-ibm-regular tracking-[.06em] text-lg"
+                    >
+                        <li class="cursor-pointer">
+                            <a href="index.html" class="px-2">Главная</a>
+                            <div class="w-0 h-0.5 bg-slate-950 transition-all"></div>
+                        </li>
+
+                        <li class="cursor-pointer">
+                            <a href="pictures.html" class="px-2">Картины</a>
+                            <div class="w-full h-0.5 bg-slate-950 transition-all"></div>
+                        </li>
+
+                        <li class="cursor-pointer">
+                            <a class="px-2">Мероприятия</a>
+                            <div class="w-0 h-0.5 bg-slate-950 transition-all"></div>
+                        </li>
+
+                        <li class="cursor-pointer">
+                            <a class="px-2">Обо мне</a>
+                            <div class="w-0 h-0.5 bg-slate-950 transition-all"></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <!-- Hero -->
+            <section class="pt-[2em]">
+                <div class="h-[25.75em] bg-slate-950">
+                    <div
+                        class="max-w-container-pictures flex justify-between items-center h-full mx-auto"
+                    >
+                        <div class="max-w-[33.75em] w-[33.75em] text-white">
+                            <p class="flex flex-col gap-1 font-montserrat text-lg">
+                                <span>“ Творчество — это сила, превращающая идеи в </span>
+                                <span class="pl-2.5"
+                                    >реальность, позволяющая видеть красоту там,</span
+                                >
+                                <span class="pl-2.5"
+                                    >где её не замечают другие, и оставлять свой
+                                </span>
+                                <span class="pl-2.5"
+                                    >след в истории через язык эмоций и образов „</span
+                                >
+                            </p>
+                        </div>
+
+                        <div class="relative flex-1 max-w-[38.75em] h-full overflow-hidden">
+                            <div class="absolute z-10 left-0 h-full -translate-x-1">
+                                <img class="h-full" src="./assets/img/static/frame-side.png" alt="frame" />
+                            </div>
+                            <div
+                                class="h-full bg-cover bg-center"
+                                style="background-image: url('./assets/img/static/pictures-hero.jpeg')"
+                            ></div>
+                            <div
+                                class="absolute z-10 top-0 right-0 h-full rotate-180 translate-x-1"
+                            >
+                                <img class="h-full" src="./assets/img/static/frame-side.png" alt="frame" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Картины -->
+            <section class="relative pt-[4em]">
+                <div class="flex flex-col max-w-container-pictures mx-auto">
+
+                    <!-- Фильтры -->
+                    <div class="flex flex-col items-center">
+                        <h2 class="font-ibm-regular text-2xl">Мои работы</h2>
+
+                        <div id="filters"
+                            class="flex justify-between items-center w-full text-lg font-montserrat tracking-wider pt-6"
+                        >
+                            <select data-select-name="availability" class="outline-none py-1 rounded cursor-pointer">
+                                <option>Все</option>
+                                <option value="true">В наличии</option>
+                            </select>
+                            <select data-select-name="style" class="outline-none py-1 rounded cursor-pointer">
+                                <option>Стилистика</option>
+                                <option value="Модернизм">Модернизм</option>
+                            </select>
+                            <select data-select-name="sizeType" class="outline-none py-1 rounded cursor-pointer">
+                                <option>Размер</option>
+                                <option value="small">Малый</option>
+                                <option value="medium">Средний</option>
+                                <option value="big">Большой</option>
+                            </select>
+                            <select data-select-name="atmosphere" class="outline-none py-1 rounded cursor-pointer">
+                                <option>Атмосфера</option>
+                                <option value="Деньги">Деньги</option>
+                                <option value="Бодрость">Бодрость</option>
+                            </select>
+                            <select data-select-name="sort" class="outline-none py-1 rounded cursor-pointer">
+                                <option value="firstNew">Сначала новые</option>
+                                <option value="firstOld">Сначала старые</option>
+                                <option value="firstCheap">Сначала дешёвые</option>
+                                <option value="firstExpensive">Сначала дорогие</option>
+                            </select>
+
+                            <div id="removeFilters"
+                                class="flex items-center gap-2 px-3 py-0.5 border border-slate-950 rounded cursor-pointer"
+                            >
+                                <span>Сбросить</span>
+                                <img
+                                    class="w-4"
+                                    src="./assets/img/icon/close.png"
+                                    alt="Очистить фильтры"
+                                />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="pictures-list" class="grid grid-cols-3 gap-x-32 gap-y-36 pt-16"></div>
+                </div>
+
+                <div class="fixed right-2 bottom-14 bg-white bg-opacity-50 backdrop-blur-sm p-2 px-6 border border-slate-950 rounded-l-[24px] rounded-tr-[32px] rounded-br-[8px] cursor-pointer hover:pr-12 transition-all">
+                    <a
+                        href="https://t.me/sufrazhistka"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="flex items-center gap-4"
+                    >
+                        <span class="text-xl pb-0.5">Связаться</span>
+                        <img class="w-6" src="./assets/img/icon/telegram.png" alt="Telegram" />
+                    </a>
+                </div>
+                
+            </section>
+        </main>
+
+        <!-- Всплывающее окно (картина) -->
+        <div id="modal-picture" class="fixed z-20 top-0 -left-[100vw] w-screen h-screen bg-white opacity-40">
+            <div class="relative w-full h-full flex justify-center items-center">
+                
+                <!-- Кнопка назад -->
+                <button id="modal-picture__close"
+                    class="absolute top-10 right-14 flex items-center gap-1 cursor-pointer hover:-translate-x-2 transition-all"
+                >
+                    <img class="w-8 h-8" src="./assets/img/icon/arrow-back.png" alt="Вернуться назад" />
+                    <span class="text-xl pb-0.5">Назад</span>
+                </button>
+
+                <div id="modal-picture__content" class="flex gap-16"></div>
+            </div>
+        </div>
+
+        <footer class="bg-slate-950 mt-[140px]">
+            <ul
+                class="max-w-container-pictures flex justify-between font-ibm-regular tracking-[.06em] py-2.5 mx-auto invert"
+            >
+                <li class="flex gap-4 items-center">
+                    <img src="./assets/img/icon/mail.png" alt="mail" width="24" height="24" />
+                    <a href="mailto:tinani@gmail.com" target="_blank" rel="noopener noreferrer"
+                        >tinani@gmail.com</a
+                    >
+                </li>
+                <li class="flex gap-4 items-center">
+                    <img src="./assets/img/icon/telegram.png" alt="telegram" width="24" height="24" />
+                    <a href="https://t.me/sufrazhistka" target="_blank" rel="noopener noreferrer"
+                        >t.me/sufrazhistka</a
+                    >
+                </li>
+                <li class="flex gap-4 items-center">
+                    <img src="./assets/img/icon/instagram.png" alt="instagram" width="24" height="24" />
+                    <a
+                        href="https://instagram.com/your_tinani"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >instagram.com/your_tinani</a
+                    >
+                </li>
+                <li class="flex gap-4 items-center">
+                    <img src="./assets/img/icon/ruble.png" alt="boosty" width="24" height="24" />
+                    <a
+                        href="https://boosty.to/tinani/donate"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >boosty.to/tinani/donate</a
+                    >
+                </li>
+            </ul>
+        </footer>
+
+        <script src="./js/pictures.js"></script>
+        <script src="./js/filters.js"></script>
+    </body>
+</html>
